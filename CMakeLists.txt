@@ -108,7 +108,7 @@ endif()
 
 install(TARGETS backward
   DESTINATION lib)
-ament_export_libraries(backward)
+# ament_export_libraries(backward)
 
 install(DIRECTORY include/
   DESTINATION include)
