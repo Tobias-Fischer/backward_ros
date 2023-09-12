@@ -123,6 +123,10 @@ foreach(def ${BACKWARD_DEFINITIONS})
 	message(STATUS "${def}")
 endforeach()
 
+if(WIN32)
+	list(APPEND _BACKWARD_LIBRARIES dbghelp psapi)
+endif()
+
 set(BACKWARD_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}")
 
 include(FindPackageHandleStandardArgs)
